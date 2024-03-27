@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Page</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+<h1>Welcome to Car Rentals</h1>
+<div class="button-container">
+<a href="index.html" class="button">Sign Up</a>
+<a href="file.html" class="button">Log In</a>
+</div>
+</div>
+</body>
+</html>
+//CSS:
+body {
+font-family: Arial, sans-serif;
+background-color: #f0f0f0;
+margin: 0;
+padding: 0;
+background-image: url('https://img.freepik.com/free-photo/sports-car-drivingasphalt-road-night-generative-ai_188544-8052.jpg'); /* Replace 'carbackground.jpg' with the path to your background image */
+background-size: cover;
+background-position: center;
+}
+.container {
+max-width: 600px;
+margin: 100px auto;
+padding: 40px;
+text-align: center;
+background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white 
+background */
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1 {
+color: #333;
+margin-bottom: 30px;
+font-size: 36px;
+}
+.button-container {
+display: flex;
+justify-content: center;
+margin-top: 40px;
+}
+.button {
+display: inline-block;
+padding: 10px 20px;
+margin: 0 10px;
+text-decoration: none;
+color: #fff;
+background-color: #007bff;
+border-radius: 5px;
+transition: background-color 0.3s ease;
+font-size: 18px;
+}
+.button:hover {
+background-color: #0056b3;
+}
+//SIGN-UP PAGE:
+//HTML:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+<div class="container">
+<form action="#" class="form" onsubmit="return validateForm()">
+<div class="nav">
+<nav class="pass">Car Rentals Sign Up</nav>
+</div>
+<label for="uname">Username:</label>
+<input type="text" name="uname" id="uname" required>
+<label for="email">Email:</label>
+<input type="email" name="email" id="email" required>
+<label for="pwd">Password:</label>
+<input type="password" name="pwd" id="pwd" required>
+<label for="cpwd">Confirm Password:</label>
+<input type="password" name="cpwd" id="cpwd" required>
+<span>Already have an account? <a href="file.html">Book Rental</a></span>
+<div class="login">
+<button id="log">Sign up</button>
+</div>
+</form>
+</div>
+<script>
+function validateForm() {
+var password = document.getElementById('pwd').value;
+var confirmPassword = document.getElementById('cpwd').value;
+if (password !== confirmPassword) {
+alert("Passwords do not match!");
+return false;
+}
+var email = document.getElementById('email').value;
+var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+if (!email.match(emailRegex)) {
+alert("Please enter a valid email address!");
+return false;
+}
+return true;
+}
+</script>
+</body>
+</html>
+//CSS:
+* {
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+body {
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+background-image: url('https://img.etimg.com/thumb/width-1200,height1200,imgsize-92902,resizemode-75,msid-96559145/magazines/panache/rimac-neveraworth-2-1-mn-is-worlds-fastest-electric-car-with-256mph-top-speed.jpg'); 
+background-size: cover;
+background-position: center;
+font-family: Arial, sans-serif;
+}
+.container {
+max-width: 400px;
+background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white 
+background */
+border-radius: 10px;
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+padding: 40px;
+}
+.form {
+display: flex;
+flex-direction: column;
+gap: 20px;
+}
+.form button {
+background-color: #3498db;
+color: #fff;
+border: none;
+padding: 10px;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+.form button:hover {
+background-color: #2980b9;
+}
+.form input[type="text"],
+.form input[type="password"] {
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 5px;
+outline: none;
+}
+.label {
+font-size: 16px;
+}
+.nav {
+font-size: 24px;
+text-align: center;
+margin-bottom: 20px;
+color: #3498db;
+}
+.signup-link a {
+color: #3498db;
+text-decoration: none;
+}
+.signup-link a:hover {
+text-decoration: underline;
+}
+//LOGIN/BOOKING PAGE:
+//HTML:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Car Booking</title>
+<link rel="stylesheet" href="design.css">
+</head>
+<body>
+<div class="container">
+<h1>Book your Car</h1>
+<form id="bookingForm">
+<label for="name">Name:</label>
+<input type="text" id="name" required><br><br>
+<label for="email">Email:</label>
+<input type="email" id="email" required><br><br>
+<label for="phone">Phone:</label>
+<input type="tel" id="phone" required><br><br>
+<label for="carType">Car Type:</label>
+<select id="carType" required>
+<option value="">Select car type</option>
+<option value="sedan">Sedan</option>
+<option value="suv">SUV</option>
+<option value="hatchback">Hatchback</option>
+</select><br><br>
+<label for="pickupDate">Pickup Date:</label>
+<input type="date" id="pickupDate" required><br><br>
+<label for="returnDate">Return Date:</label>
+<input type="date" id="returnDate" required><br><br>
+<button type="submit">Book Now</button>
+</form>
+</div>
+<script src="check.js"></script>
+</body>
+</html>
+//CSS:
+body {
+font-family: Arial, sans-serif;
+background-color: #f0f0f0;
+background-image: url('https://images.unsplash.com/photo-1601929862217-
+f1bf94503333?q=80&w=1000&auto=format&fit=crop&ixlib=rb4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bHV4dXJ5JTIwY2FyfGVufDB8fDB8fHww'); /* 
+Replace 'car-background.jpg' with the path to your background image */
+background-size: cover;
+background-position: center;
+margin: 0;
+padding: 0;
+}
+.container {
+max-width: 500px; /* Reduced max-width */
+margin: 10px auto; /* Reduced margin */
+padding: 20px;
+background-color: #fff;
+border-radius: 8px; /* Reduced border-radius */
+box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* Reduced box-shadow */
+}
+h1 {
+text-align: center;
+color: #333;
+margin-bottom: 20px; /* Reduced margin-bottom */
+}
+form {
+display: grid;
+grid-gap: 10px; /* Reduced grid-gap */
+}
+label {
+font-weight: bold;
+color: #555;
+}
+input,
+select,
+button {
+width: calc(100% - 20px); /* Adjusted width */
+padding: 8px; /* Reduced padding */
+border: 1px solid #ccc;
+border-radius: 4px; /* Reduced border-radius */
+box-sizing: border-box;
+}
+input[type="date"] {
+-webkit-appearance: none;
+}
+button {
+background-color: #007bff;
+color: #fff;
+cursor: pointer;
+transition: background-color 0.3s ease; /* Added transition */
+}
+button:hover {
+background-color: #0056b3;
+}
+JS:
+document.getElementById('bookingForm').addEventListener('submit', function(event) 
+{
+event.preventDefault();
+// Get form values
+var name = document.getElementById('name').value.trim();
+var email = document.getElementById('email').value.trim();
+var phone = document.getElementById('phone').value.trim();
+var carType = document.getElementById('carType').value.trim();
+var pickupDate = document.getElementById('pickupDate').value.trim();
+var returnDate = document.getElementById('returnDate').value.trim();
+var namePattern = /^[A-Z][a-z]*$/;
+if (!namePattern.test(name)) {
+alert('Name must start with a capital letter and contain only 
+alphabets.');
+return;
+}
+var emailPattern = /^[a-zA-Z0-9]+@[a-zA-Z]+\.(com|in)$/;
+if (!emailPattern.test(email)) {
+alert('Please enter a valid email address.');
+return;
+}
+var phonePattern = /^\d{10}$/;
+if (!phonePattern.test(phone)) {
+alert('Phone number must be 10 digits without any spaces or special 
+characters.');
+return;
+}
+if (new Date(returnDate) <= new Date(pickupDate)) {
+alert('Return date must be after pickup date.');
+return;
+}
+// Display booking details
+alert(`Booking Details:
+Name: ${name}
+Email: ${email}
+Phone: ${phone}
+Car Type: ${carType}
+Pickup Date: ${pickupDate}
+Return Date: ${returnDate}`);
+});
